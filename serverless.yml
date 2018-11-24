@@ -1,0 +1,102 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: nextjsCrashCourse
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: NextJS
+  region: ap-northeast-2
+  profile: 404hunter-geoseong
+  iamRoleStatements:
+    - Effect: "Allow" # xray permissions (required)
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
+
+custom:
+  environment:
+    GEOSEONG: dev
+
+functions:
+  routeOne:
+    handler: handler.nextjs
+    name: geoseong-nextjs-one # optional, Deployed Lambda name
+    description: Next.js study-one  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 128
+    events:
+      - http:
+          path: /one
+          method: get
+          cors: true
+  routeTwo:
+    handler: handler.nextjs
+    name: geoseong-nextjs-two # optional, Deployed Lambda name
+    description: Next.js study-two  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 128
+    events:
+      - http:
+          path: /two
+          method: get
+          cors: true
+  routeThree:
+    handler: handler.nextjs
+    name: geoseong-nextjs-three # optional, Deployed Lambda name
+    description: Next.js study-three  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 128
+    events:
+      - http:
+          path: /three
+          method: get
+          cors: true
+  routeFour:
+    handler: handler.nextjs
+    name: geoseong-nextjs-four # optional, Deployed Lambda name
+    description: Next.js study-four  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 128
+    events:
+      - http:
+          path: /four
+          method: get
+          cors: true
+  routeFive:
+    handler: handler.nextjs
+    name: geoseong-nextjs-five # optional, Deployed Lambda name
+    description: Next.js study-five  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 128
+    events:
+      - http:
+          path: /five
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-tracing

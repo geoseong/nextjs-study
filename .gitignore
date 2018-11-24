@@ -1,0 +1,11 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# temp file
+_package.json
+_serverless.yml
+__handler.js
