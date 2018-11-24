@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "rm -rf ../next-static-site && next export -o ../next-static-site && cd ../next-static-site && git init && git remote add origin https://github.com/geoseong/nextjs-study.git",
+    "export": "rm -rf ../temp-next-static-site && next build && next export -o ../temp-next-static-site && npm run delete:except:git && mv ../temp-next-static-site/* ../next-static-site",
     "export:help": "next export -h",
     "export:test": "next export",
+    "export:test:ex": "next export -o ../temp-next-static-site",
+    "delete:except:git": "find ../next-static-site -not -path '*.git*' -not -path '*next-static-site' -print0 | xargs -0 rm -rf",
     "start": "next start",
-    "deploy": "aws s3 cp ../next-static-site s3://nextjs-geoseong --recursive --acl public-read --profile 404hunter-geoseong",
-    "deploy:static": "npm run build && next export -o ../next-static-site && aws s3 cp ../next-static-site s3://nextjs-test-geoseong --recursive --acl public-read --profile 404hunter-geoseong",
+    "deploy": "-",
+    "deploy:static": "aws s3 cp ../next-static-site s3://nextjs-geoseong --recursive --acl public-read --profile 404hunter-geoseong",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

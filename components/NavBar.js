@@ -13,22 +13,22 @@ const NavBar = () => (
           <Link href="/"><a className="nav-link">Home</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/about"><a className="nav-link">About</a></Link>
+          <Link href="./about"><a className="nav-link">About</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/one"><a className="nav-link">one</a></Link>
+          <Link href="./one"><a className="nav-link">one</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/two"><a className="nav-link">two</a></Link>
+          <Link href="./two"><a className="nav-link">two</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/three"><a className="nav-link">three</a></Link>
+          <Link href="./three"><a className="nav-link">three</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/four"><a className="nav-link">four</a></Link>
+          <Link href="./four"><a className="nav-link">four</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/five"><a className="nav-link">five</a></Link>
+          <Link href="./five"><a className="nav-link">five</a></Link>
         </li>
       </ul>
       <form className="form-inline my-2 my-lg-0">
