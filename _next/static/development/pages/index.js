@@ -37,7 +37,7 @@ var Layout = function Layout(props) {
     content: "ie=edge",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -45,7 +45,7 @@ var Layout = function Layout(props) {
     content: "width=device-width, initial-scale=1, shrink-to-fit=no",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -53,7 +53,7 @@ var Layout = function Layout(props) {
     content: "Geoseong's Next.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -61,7 +61,7 @@ var Layout = function Layout(props) {
     content: "https://avatars2.githubusercontent.com/u/19166187?s=460&v=4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -69,15 +69,7 @@ var Layout = function Layout(props) {
     content: "https://avatars2.githubusercontent.com/u/19166187?s=460&v=4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    rel: "canonical",
-    href: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -85,20 +77,36 @@ var Layout = function Layout(props) {
     href: "https://bootswatch.com/4/darkly/bootstrap.css",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    name: "google-site-verification",
+    content: "b9f9pZDPKGgvgDvrQ90YBTdm2_wO0t255GgQzJp79Ew",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 14
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    name: "naver-site-verification",
+    content: "974e44a5d49702094ee662b879e34157b1c4b8fa",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, props.children));
@@ -135,13 +143,13 @@ var NavBar = function NavBar() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "navbar-brand",
-    href: "#",
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, "Navbar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Geoseong's Next.js Study"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -205,7 +213,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
+    href: "./about",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -226,7 +234,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/one",
+    href: "./one",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -247,7 +255,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/two",
+    href: "./two",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
@@ -268,7 +276,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/three",
+    href: "./three",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -289,7 +297,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/four",
+    href: "./four",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -310,7 +318,7 @@ var NavBar = function NavBar() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/five",
+    href: "./five",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -11039,7 +11047,7 @@ var Index = function Index(props) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
     property: "og:url",
-    content: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/index",
+    content: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -11087,7 +11095,7 @@ var Index = function Index(props) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
     name: "twitter:url",
-    content: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/index",
+    content: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -11101,29 +11109,37 @@ var Index = function Index(props) {
       lineNumber: 20
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+    rel: "canonical",
+    href: "http://nextjs-geoseong.s3-website.ap-northeast-2.amazonaws.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, "Welcome to BitzPrice"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
+    },
+    __self: this
+  }, "Welcome to BitzPrice"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: this
   }, "Application to view Bitcoin prices"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Prices__WEBPACK_IMPORTED_MODULE_6__["default"], {
     data: props.data,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }), props.data.time.updated));
