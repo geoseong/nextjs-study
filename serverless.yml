@@ -36,16 +36,16 @@ custom:
     GEOSEONG: dev
 
 functions:
-  routeOne:
+  routeAllinOne:
     handler: handler.nextjs
-    name: geoseong-nextjs-one # optional, Deployed Lambda name
-    description: Next.js study-one  # optional, Description to publish to AWS
+    name: geoseong-nextjs-AllinOne # optional, Deployed Lambda name
+    description: Next.js Function in All In One  # optional, Description to publish to AWS
     environment: ${self:custom.environment}
     tracing: true # overrides provider settings (opt out)
     memorySize: 128
     events:
       - http:
-          path: /{proxy+}
+          path: /{addr}
           method: get
           cors: true
   # routeOne:

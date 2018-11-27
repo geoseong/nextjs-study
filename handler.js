@@ -70,7 +70,8 @@
 // const awsSdk = awsXRay.captureAWS(require('aws-sdk'));
 
 module.exports.nextjs = (event, context, callback) => {
-  console.log(event)
+  // console.log(event)
+  console.log(event.pathParameters)
   // const response = {
   //   statusCode: 200,
   //   body: JSON.stringify({
@@ -99,7 +100,8 @@ module.exports.nextjs = (event, context, callback) => {
     five: 'five',
   }
 
-  switch (event.path.substring(1)) {
+  // switch (event.path.substring(1)) {
+  switch (event.pathParameters.addr) {
     case routes.one:
       return done(null, {
         message: 'one returned'
