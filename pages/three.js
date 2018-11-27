@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 class Three extends Component {
   static getInitialProps = async function() {
-    const endpoint = `https://s2wv6mjpph.execute-api.ap-northeast-2.amazonaws.com/NextJS/three`;
+    const endpoint = `https://9ze7w36n84.execute-api.ap-northeast-2.amazonaws.com/NextJS/three`;
     // const endpoint = `http://localhost:8888/three`;
     const res = await fetch(endpoint)
     const data = await res.json()
