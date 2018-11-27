@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const NavBar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">Geoseong's Next.js Study</a>
+    <a className="navbar-brand" href="/nextjs-study/">Geoseong's Next.js Study</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -10,25 +10,25 @@ const NavBar = () => (
     <div className="collapse navbar-collapse" id="navbarColor01">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link href="/"><a className="nav-link">Home</a></Link>
+          <Link href="/nextjs-study/"><a className="nav-link">Home</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./about"><a className="nav-link">About</a></Link>
+          <Link href="/nextjs-study/about"><a className="nav-link">About</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./one"><a className="nav-link">one</a></Link>
+          <Link href="/nextjs-study/one"><a className="nav-link">one</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./two"><a className="nav-link">two</a></Link>
+          <Link href="/nextjs-study/two"><a className="nav-link">two</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./three"><a className="nav-link">three</a></Link>
+          <Link href="/nextjs-study/three"><a className="nav-link">three</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./four"><a className="nav-link">four</a></Link>
+          <Link href="/nextjs-study/four"><a className="nav-link">four</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="./five"><a className="nav-link">five</a></Link>
+          <Link href="/nextjs-study/five"><a className="nav-link">five</a></Link>
         </li>
       </ul>
       <form className="form-inline my-2 my-lg-0">
