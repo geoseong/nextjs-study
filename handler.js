@@ -70,7 +70,7 @@
 // const awsSdk = awsXRay.captureAWS(require('aws-sdk'));
 
 module.exports.nextjs = (event, context, callback) => {
-  console.log(event.path)
+  console.log(event)
   // const response = {
   //   statusCode: 200,
   //   body: JSON.stringify({
@@ -124,6 +124,11 @@ module.exports.nextjs = (event, context, callback) => {
       return done(null, {
         message: 'five returned'
       });
+      break;
+    case 'favicon.ico':
+      return done({
+        message: 'favicon'
+      }, null);
       break;
     default:
       // callback(null, response);
