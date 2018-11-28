@@ -31,6 +31,10 @@ provider:
         - "*"
 
 custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
+    includeModules: false   # Node modules configuration for packaging
+    packager: 'npm'   # Packager that will be used to package your external modules
   environment:
     GEOSEONG: dev
 
@@ -51,3 +55,4 @@ functions:
 plugins:
   - serverless-offline
   - serverless-plugin-tracing
+  - serverless-webpack

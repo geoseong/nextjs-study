@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "dev": "next",
-    "server:dev": "sls offline start",
+    "server:dev": "next build && sls offline start",
     "server:prod": "NODE_ENV=production sls offline start",
     "build": "next build",
+    "build:test:production": "next build && serverless package --stage production",
     "export": "rm -rf ../temp-next-static-site && next build && next export -o ../temp-next-static-site && npm run delete:except:git && mv ../temp-next-static-site/* ../next-static-site",
     "export:help": "next export -h",
     "export:test": "next build && next export",
@@ -15,7 +16,8 @@
     "start": "next start",
     "deploy": "-",
     "deploy:aws": "next build && aws s3 cp ../next-static-site s3://nextjs-geoseong --recursive --acl public-read --profile 404hunter-geoseong",
-    "deploy:serverless": "sls deploy --aws-profile 404hunter-geoseong",
+    "deploy:serverless": "next build && sls deploy -v --aws-profile 404hunter-geoseong",
+    "deploy:test:production": "npm run build:production && serverless deploy -v --package .serverless --stage production",
     "deploy:gitpage": "next build && next export && cp sitemap.xml out/ && gh-pages -d out -b master",
     "gitpage": "gh-pages -d out -b master",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,7 +36,10 @@
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
     "serverless-offline": "^3.31.3",
-    "serverless-plugin-tracing": "^2.0.0"
+    "serverless-plugin-tracing": "^2.0.0",
+    "serverless-webpack": "^5.2.0",
+    "webpack-node-externals": "^1.7.2"
   }
 }

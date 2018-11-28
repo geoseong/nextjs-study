@@ -8,3 +8,6 @@ jspm_packages
 # For AWS Lambda Error: EROFS: read-only file system
 tmp
 out
+
+# hide next build
+.next

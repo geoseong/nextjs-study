@@ -27,17 +27,8 @@ module.exports.ssrrender = (event, context, callback) => {
 		},
   });
   
-  const routes = {
-    one: 'one',
-    two: 'two',
-    three: 'three',
-    four: 'four',
-    five: 'five',
-  }
-  const queryParams = { key: event.pathParameters.addr }
-  
   console.log('event.pathParameters.addr', event.pathParameters.addr);
-  const exp = express()
+  const exp = express();
   exp.use(cors());   // CORS setting : enable crossdomain access
   app.prepare().then(() => {
     exp.use(awsServerlessExpressMiddleware.eventContext());
@@ -48,13 +39,6 @@ module.exports.ssrrender = (event, context, callback) => {
       } catch(e) {
         done({message: '렌더링에 실패하였습니다.'}, null);
       }
-      // res.set({
-      //   'Access-Control-Allow-Origin': '*',
-      // })
-      // res.type('html')
-      // done(null, res)
-      // const renderer = await app.render(req, res, '/'+event.pathParameters.addr, queryParams)
-      // res.send(renderer);
     });
     exp.get('*', (req, res) => {
       return handle(req, res)
