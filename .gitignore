@@ -1,3 +1,10 @@
+# package directories
 node_modules
-.next
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# For AWS Lambda Error: EROFS: read-only file system
+tmp
 out

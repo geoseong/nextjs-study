@@ -1,0 +1,53 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: nextjsCrashServerless
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: NextJS
+  region: ap-northeast-2
+  iamRoleStatements:
+    - Effect: "Allow" # xray permissions (required)
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
+
+custom:
+  environment:
+    GEOSEONG: dev
+
+functions:
+  routeAllinOne:
+    handler: handler.ssrrender
+    name: geoseong-nextjs-ssr # optional, Deployed Lambda name
+    description: Next.js Server Side Rendering  # optional, Description to publish to AWS
+    environment: ${self:custom.environment}
+    tracing: true # overrides provider settings (opt out)
+    memorySize: 512
+    events:
+      - http:
+          path: /{addr}
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-tracing

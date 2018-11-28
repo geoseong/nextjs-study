@@ -4,6 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "next",
+    "server:dev": "sls offline start",
+    "server:prod": "NODE_ENV=production sls offline start",
     "build": "next build",
     "export": "rm -rf ../temp-next-static-site && next build && next export -o ../temp-next-static-site && npm run delete:except:git && mv ../temp-next-static-site/* ../next-static-site",
     "export:help": "next export -h",
@@ -13,7 +15,8 @@
     "start": "next start",
     "deploy": "-",
     "deploy:aws": "next build && aws s3 cp ../next-static-site s3://nextjs-geoseong --recursive --acl public-read --profile 404hunter-geoseong",
-    "deploy:gitpage": "next build && next export && gh-pages -d out -b master",
+    "deploy:serverless": "sls deploy --aws-profile 404hunter-geoseong",
+    "deploy:gitpage": "next build && next export && cp sitemap.xml out/ && gh-pages -d out -b master",
     "gitpage": "gh-pages -d out -b master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,10 +24,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.3.5",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "gh-pages": "^2.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.31.3",
+    "serverless-plugin-tracing": "^2.0.0"
   }
 }
