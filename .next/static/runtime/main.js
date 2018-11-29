@@ -5349,6 +5349,29 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/next-offline/register-sw-compiled.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/next-offline/register-sw-compiled.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then(function(registration) {
+        console.log('SW registered: ', registration);
+      })
+      .catch(function(registrationError) {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/client/dev-error-overlay/eventsource.js":
 /*!************************************************************************!*\
   !*** ./node_modules/next/dist/client/dev-error-overlay/eventsource.js ***!
@@ -5706,7 +5729,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_front/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_ssr/.next");
       return error;
     }
   };
@@ -17959,14 +17982,16 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 0:
-/*!******************************************************!*\
-  !*** multi ./node_modules/next/dist/client/next-dev ***!
-  \******************************************************/
+/***/ 3:
+/*!**************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/next-offline/register-sw-compiled.js ./node_modules/next-offline/register-sw-compiled.js ./node_modules/next/dist/client/next-dev ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_front/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
+__webpack_require__(/*! /Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_ssr/node_modules/next-offline/register-sw-compiled.js */"./node_modules/next-offline/register-sw-compiled.js");
+__webpack_require__(/*! /Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_ssr/node_modules/next-offline/register-sw-compiled.js */"./node_modules/next-offline/register-sw-compiled.js");
+module.exports = __webpack_require__(/*! /Users/geoseong/Documents/Study/nextjs_study/nextjs_crash_course_ssr/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),
@@ -17982,5 +18007,5 @@ module.exports = dll_52339ab353c8e0db40da;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=main.js.map

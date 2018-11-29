@@ -14,8 +14,8 @@ const handle = app.getRequestHandler()
  */
 /**
  * @error-1 `Error: EROFS: read-only file system, rmdir '/var/task/.next' || '/var/task/tmp'`
- * @description 펑션 안에서는 `/tmp` 폴더만 조작이 가능한듯?
- * @solution next.config.js 에서 distDir을 '../../tmp/.next'로 조작항 ㅕ해결
+ * @description only `/tmp` folder is changable in Lambda
+ * @solution changed path(distDir) at `next.config.js` to '../../tmp/.next'
  */
 module.exports.ssrrender = (event, context, callback) => {
   const done = (err, res) => callback(null, {

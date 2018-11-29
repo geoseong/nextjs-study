@@ -17,6 +17,19 @@ service: nextjsCrashServerless
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
+package:
+  exclude:
+    - node_modules/.cache/**
+    - static/**
+    - .cache
+    - package.json
+    - yarn.lock
+    - package-lock.json
+    - "**.test.js"
+    - "__snapshots__/"
+  include:
+    - .next/**
+
 provider:
   name: aws
   runtime: nodejs8.10
@@ -31,16 +44,16 @@ provider:
         - "*"
 
 custom:
-  webpack:
-    webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
-    includeModules: false   # Node modules configuration for packaging
-    packager: 'npm'   # Packager that will be used to package your external modules
   environment:
     GEOSEONG: dev
+  # webpack:
+  #   webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
+  #   includeModules: false   # Node modules configuration for packaging
+  #   packager: 'npm'   # Packager that will be used to package your external modules
 
 functions:
   routeAllinOne:
-    handler: handler.ssrrender
+    handler: serverless_handler/index.handler
     name: geoseong-nextjs-ssr # optional, Deployed Lambda name
     description: Next.js Server Side Rendering  # optional, Description to publish to AWS
     environment: ${self:custom.environment}
@@ -55,4 +68,4 @@ functions:
 plugins:
   - serverless-offline
   - serverless-plugin-tracing
-  - serverless-webpack
+  # - serverless-webpack
