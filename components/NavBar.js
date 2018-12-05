@@ -10,25 +10,28 @@ const NavBar = () => (
     <div className="collapse navbar-collapse" id="navbarColor01">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link href="/nextjs-study/"><a className="nav-link">Home</a></Link>
+          <Link href="/NextJS/"><a className="nav-link">Home</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/about"><a className="nav-link">About</a></Link>
+          <Link href="/NextJS/about"><a className="nav-link">About</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/one"><a className="nav-link">one</a></Link>
+          <Link href="/NextJS/one"><a className="nav-link">one</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/two"><a className="nav-link">two</a></Link>
+          <Link href="/NextJS/two"><a className="nav-link">two</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/three"><a className="nav-link">three</a></Link>
+          <Link href="/NextJS/three"><a className="nav-link">three</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/four"><a className="nav-link">four</a></Link>
+          <Link href="/NextJS/four"><a className="nav-link">four</a></Link>
         </li>
         <li className="nav-item">
-          <Link href="/nextjs-study/five"><a className="nav-link">five</a></Link>
+          <Link href="/NextJS/five"><a className="nav-link">five</a></Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/NextJS/six"><a className="nav-link">six</a></Link>
         </li>
       </ul>
       <form className="form-inline my-2 my-lg-0">

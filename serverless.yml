@@ -61,7 +61,11 @@ functions:
     memorySize: 512
     events:
       - http:
-          path: /{addr}
+          path: /
+          method: get
+          cors: true
+      - http:
+          path: /{addr+}
           method: get
           cors: true
 
